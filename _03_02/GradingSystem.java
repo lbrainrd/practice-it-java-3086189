@@ -1,7 +1,5 @@
 package _03_02;
 
-import javax.lang.model.util.ElementScanner14;
-
 public class GradingSystem {
 
   public boolean isAPass(int percentage) {
@@ -41,15 +39,12 @@ public class GradingSystem {
     // that says "The student is not allowed to retake this exam."
     // If percentage is 60 or higher, return a String that says "A retake is not
     // required."
-    if (percentage < 60 && allowedToRetake == true) {
+    if (percentage < 60 && allowedToRetake) {
       return "The student has been entered for a retake.";
-    } else {
-        if (percentage < 60 && allowedToRetake == false) {
+    } else if (percentage < 60 && !allowedToRetake) {
           return "The student is not allowed to retake this exam.";
-    } else {
-        if (percentage >= 60) {
+    } else if (percentage >= 60) {
           return "A retake is not required.";
-        }
     }
   }
 
