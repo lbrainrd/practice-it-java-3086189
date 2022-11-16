@@ -46,6 +46,8 @@ public class GradingSystem {
     } else if (percentage >= 60) {
           return "A retake is not required.";
     }
+
+    return "";
   }
 
 }
